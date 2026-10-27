@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prachi | Developer Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b1120;
+            color: white;
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #111a2e;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        section {
+            padding: 80px 8%;
+        }
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .hero h1 {
+            font-size: clamp(35px, 5vw, 60px);
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+            max-width: 550px;
+            margin-bottom: 25px;
+        }
+
+        .profile {
+            width: 250px;
+            height: 250px;
+            border: 4px solid #38bdf8;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-size: 90px;
+            background: #172554;
+            box-shadow: 0 0 40px #0ea5e955;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 22px;
+            border: none;
+            border-radius: 8px;
+            background: #38bdf8;
+            color: #07111f;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #7dd3fc;
+            transform: translateY(-3px);
+        }
+
+        .section-title {
+            font-size: 34px;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .section-title span {
+            color: #38bdf8;
+        }
+
+        .about {
+            text-align: center;
+            color: #cbd5e1;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            padding: 25px;
+            background: #111a2e;
+            border: 1px solid #24334d;
+            border-radius: 14px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #38bdf8;
+        }
+
+        .card h3 {
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #cbd5e1;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: auto;
+            display: grid;
+            gap: 15px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            background: #111a2e;
+            color: white;
+            font: inherit;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 130px;
+        }
+
+        #formMessage {
+            color: #7dd3fc;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #111a2e;
+            color: #cbd5e1;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .profile {
+                width: 180px;
+                height: 180px;
+                font-size: 65px;
+            }
+
+            section {
+                padding: 60px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Prachi.dev</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div>
+            <h1>Hello, I'm <span>Prachi</span></h1>
+            <h2>Computer Engineer | Developer</h2>
+
+            <p>
+                I build websites and software applications.
+                I enjoy solving problems and learning new technologies
+                to create useful digital experiences.
+            </p>
+
+            <a href="#projects" class="btn">Explore My Projects</a>
+        </div>
+
+        <div class="profile">👩‍💻</div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About <span>Me</span></h2>
+
+        <p class="about">
+            I am a Computer Engineering graduate interested in
+            software development. I am currently improving my
+            programming skills and learning how to build real-world
+            applications using modern technologies.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">My <span>Skills</span></h2>
+
+        <div class="grid">
+            <div class="card">
+                <h3>HTML & CSS</h3>
+                <p>Building structured, responsive and attractive web pages.</p>
+            </div>
+
+            <div class="card">
+                <h3>C# & .NET</h3>
+                <p>Learning object-oriented programming and application development.</p>
+            </div>
+
+            <div class="card">
+                <h3>JavaScript</h3>
+                <p>Adding interactive features and dynamic behavior to websites.</p>
+            </div>
+
+            <div class="card">
+                <h3>SQL</h3>
+                <p>Learning database queries and data management.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">My <span>Projects</span></h2>
+
+        <div class="grid">
+            <div class="card">
+                <h3>X-Sense</h3>
+                <p>
+                    A multimodal sentiment intelligence system
+                    designed to analyze social media content.
+                </p>
+                <br>
+                <a href="#contact" class="btn">Know More</a>
+            </div>
+
+            <div class="card">
+                <h3>Portfolio Website</h3>
+                <p>
+                    A responsive personal website to showcase
+                    my skills, projects and learning journey.
+                </p>
+                <br>
+                <a href="#contact" class="btn">Know More</a>
+            </div>
+
+            <div class="card">
+                <h3>.NET Application</h3>
+                <p>
+                    A practice project to learn C#, classes,
+                    methods and object-oriented programming.
+                </p>
+                <br>
+                <a href="#contact" class="btn">Know More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact <span>Me</span></h2>
+
+        <form class="contact-form" id="contactForm">
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <textarea
+                id="message"
+                placeholder="Write your message"
+                required
+            ></textarea>
+
+            <button type="submit" class="btn">Send Message</button>
+
+            <p id="formMessage"></p>
+        </form>
+    </section>
+
+    <footer>
+        <p>© <span id="year"></span> Prachi.dev | Keep Learning, Keep Growing!</p>
+    </footer>
+
+    <script>
+        // Display the current year
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+        // Handle the contact form
+        const form = document.getElementById("contactForm");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+
+            if (name === "" || email === "" || message === "") {
+                document.getElementById("formMessage").textContent =
+                    "Please fill in all fields.";
+                return;
+            }
+
+            document.getElementById("formMessage").textContent =
+                "Thank you, " + name + "! Your form was validated.";
+
+            form.reset();
+        });
+    </script>
+
+</body>
+</html>
